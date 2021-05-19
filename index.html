@@ -1,0 +1,109 @@
+<html>
+
+    <head>
+
+        <title>Code Chef</title>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <div class="main">
+
+            <nav>
+                <div class="logo">
+                    <img src="images/CodeChef.jpeg" width="50" height="50">
+                </div>
+
+                <div class="nav-links">
+
+                    <ul>
+
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+            
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="images/Klogo.png" class="Kitchen">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/Braised Pork Belly Over Rice.jpeg">
+                        <div>
+                            <h1>Braised Pork Belly Rice Plate</h1>
+                            <p>Braised Pork Belly served with white rice, bok choy and eggs</p>
+                        </div>
+                    </div>
+
+                    <div class="feature two">
+                        <img src="images/Pork-Belly.jpeg">
+                        <div>
+                            <h2>Pork Belly</h2>
+                            <p>Whole Pork Belly and Bok Choy</p>
+                        </div>
+                    </div>
+
+                    <div class="feature three">
+                        <img src="images/Braised-Pork-Belly.jpeg">
+                        <div>
+                            <h3>Braised Pork Belly</h3>
+                            <p>Braised Pork Belly with sauce</p>
+                        </div>
+                    </div>
+
+                    <div class="feature four">
+                        <img src="images/Braised-Pork-With-Eggs.jpeg">
+                        <div>
+                            <h4>Braised Pork Belly With Eggs</h4>
+                            <p>Add the Eggs to the Braised Pork Belly & Sauce</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="controls">
+                <img src="images/radio arrow button.png" id="upBtn">
+                <h3>Features</h3>
+                <img src="images/radio arrow button.png" id="downBtn">
+            </div>
+
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            
+            upBtn.onclick = function() 
+            {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            downBtn.onclick = function() 
+            {
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+        </script>
+
+    </body>
+
+</html>
